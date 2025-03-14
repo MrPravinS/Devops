@@ -14,4 +14,4 @@ RUN npm install
 
 COPY index.js  /home/app/index.js
 
- CMD [ "index.js" ]
+CMD [ "index.js" ]
