@@ -13,5 +13,6 @@ COPY package*.json .
 RUN npm install
 
 COPY index.js  /home/app/index.js
+EXPOSE 8000
 
 CMD [ "index.js" ]
