@@ -1,18 +1,17 @@
 #  configuration file
 
-FROM node:20.19.0-alpine3.21
+FROM  ubuntu
 
-
-# installing curl
-
+RUN apt-get update
+RUN apt install -y curl
+RUN curl -sL https://deb.nodesource.com/setup_22.x -o /tmp/nodesource_setup.sh
+RUN bash /tmp/nodesource_setup.sh
+RUN apt install -y nodejs
 
 #  copy the source code to docker img 
-WORKDIR /home/app/
-
-COPY package*.json .
-RUN npm install
-
 COPY index.js  /home/app/index.js
-EXPOSE 8000
+COPY package-lock.json  /home/app/package-lock.json 
+COPY package.json  /home/app/package.json 
 
-CMD [ "index.js" ]
+WORKDIR /home/app/
+RUN npm install
