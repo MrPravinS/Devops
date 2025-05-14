@@ -13,3 +13,13 @@ function newFeatureAdded(){
 
     
 }
+
+
+function newFeatureAddedB(){
+    console.log("New Feature added ");
+    console.log("New Feature added A" );
+    console.log("B feature added " );
+
+
+    
+}
