@@ -8,6 +8,8 @@ getName("Pravin")
 
 
 function newFeatureAdded(){
-    console.log("New Feature added");
+    console.log("New Feature added ");
+    console.log("New Feature added A" );
+
     
 }
